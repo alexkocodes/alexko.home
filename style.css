@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+@font-face {
+    font-family: Termina;
+    src: url("fonts/Termina\ W05\ Bold.ttf");
+  }
 body {
     margin:0;
     padding:0;
@@ -200,4 +205,33 @@ background: #72a1eb;
 
 #content4 #container_left{
     max-width: 70%;
+}
+
+.bio_block{
+    max-width: 30%;
+    font-family: 'Merriweather Sans', sans-serif;
+    color: rgb(58, 58, 58);
+    position: absolute;
+    opacity: 0%;
+    transition: 1s;
+}
+
+#bio1{
+    top: 80px;
+    left: 30px
+}
+
+#bio2{
+    bottom: 80px;
+    left: 180px
+}
+
+#bio3{
+    right: 300px;
+    top: 90px
+}
+
+#bio4{
+    right: 120px;
+    bottom: 80px
 }

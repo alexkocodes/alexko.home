@@ -4,19 +4,31 @@ let clicked = false;
 
 for(let i=0; i<=all_buttons.length; i++){
     all_buttons[i].addEventListener("click", function(e){
-        e.stopPropagation();
-        console.log(clicked);
+        console.log(e.target);
         if(clicked){
-            all_buttons[i].style.setProperty('transform', originalMatrix);
-            all_buttons[i].style.zIndex = "1";
-            clicked = false;
+            if(e.target ==  document.querySelector("#content1 #container_right")){
+                window.open("https://fyk211.github.io/30MFF/");
+            }
+            else if(e.target ==  document.querySelector("#content2 #container_right")){
+                window.open("https://fyk211.github.io/overthinking_cat/");
+            }
+            else if(e.target ==  document.querySelector("#content3 #container_right")){
+                window.open("https://ava-creates.github.io/sound_project/");
+            }
+            else if(e.target ==  document.querySelector("#content4 #container_right")){
+                window.open("https://fyk211.github.io/vide-OH/");
+            }
+            else{
+                all_buttons[i].style.setProperty('transform', originalMatrix);
+                all_buttons[i].style.zIndex = "1";
+                clicked = false;
 
-            all_buttons[i].querySelector("span").style.display = "block";
-            all_buttons[i].querySelector("span").style.opacity = "100%";
-            hideContent(all_buttons[i]);
+                all_buttons[i].querySelector("span").style.display = "block";
+                all_buttons[i].querySelector("span").style.opacity = "100%";
+                hideContent(all_buttons[i]);
+            }
         }
         else{
-
             all_buttons[i].style.transform = "";
             all_buttons[i].style.transform += "scale(10, 10)";
             all_buttons[i].style.zIndex = "4";
@@ -43,6 +55,8 @@ for(let i=0; i<=all_buttons.length; i++){
     })
 };
 
+
+
 function showContent(button){
     button.querySelector(".content").style.visibility = "visible";
 }
@@ -50,14 +64,4 @@ function showContent(button){
 function hideContent(button){
     button.querySelector(".content").style.visibility = "hidden";
 }
-
-let container_right = document.getElementById("container_right");
-document.getElementById("container_right").addEventListener("click", function(e){
-    if (!e) var e = window.event;
-	e.cancelBubble = true;
-	if (e.stopPropagation) e.stopPropagation();
-    console.log("clicked inside");
-    window.open("https://fyk211.github.io/30MFF/");
-})
-
 

@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 body {
     margin:0;
     padding:0;
     background:#ccc;
     font-family: 'Roboto Condensed', sans-serif;
-  
 }
 /* button css effect starts here */
 ul {
@@ -21,13 +21,6 @@ list-style:none;
 margin:0 5px;
 }
 
-ul li a .fa {
-font-size: 40px;
-color: #262626;
-line-height:80px;
-transition: .5s;
-padding-right: 14px;
-}
 
 ul li a span {
 padding:0;
@@ -36,7 +29,9 @@ position:absolute;
 top: 30px;
 color: #262626;
 letter-spacing: 4px;
+display: block;
 transition: .5s;
+transition: opacity 0.5s;
 }
 
 ul li a {
@@ -51,6 +46,9 @@ padding-left: 20px;
 transform: rotate(-30deg) skew(25deg) translate(0,0);
 transition:.5s;
 box-shadow: -20px 20px 10px rgba(0,0,0,.5);
+
+position: relative;
+
 }
 ul li a:before {
 content: '';
@@ -74,55 +72,54 @@ background: #b1b1b1;
 transform: .5s;
 transform: rotate(0deg) skewX(-45deg);
 }
-
+/*
 .hovered_btn:hover {
 transform: rotate(-30deg) skew(25deg) translate(20px,-15px);
 box-shadow: -50px 50px 50px rgba(0,0,0,.5);
 }
-
-
+*/
 ul li:hover span {
 color:#fff;
 }
 
 ul li:hover:nth-child(1) a{
-background: #3b5998;
+background: #ac50e1;
 }
 ul li:hover:nth-child(1) a:before{
-background: #365492;
+background: #792ca6;
 }
 ul li:hover:nth-child(1) a:after{
-background: #4a69ad;
+background: #bf74ea;
 }
 
 ul li:hover:nth-child(2) a{
-background: #00aced;
+background: rgb(243, 109, 190);
 }
 ul li:hover:nth-child(2) a:before{
-background: #097aa5;
+background: rgb(188, 69, 140);
 }
 ul li:hover:nth-child(2) a:after{
-background: #53b9e0;
+background: rgb(240, 143, 201);
 }
 
 ul li:hover:nth-child(3) a{
-background: #dd4b39;
+background: #f6b162;
 }
 ul li:hover:nth-child(3) a:before{
-background: #b33a2b;
+background: #c38742;
 }
 ul li:hover:nth-child(3) a:after{
-background: #e66a5a;
+background: #efbe87;
 }
 
 ul li:hover:nth-child(4) a{
-background: #e4405f;
+background: #4987ec;
 }
 ul li:hover:nth-child(4) a:before{
-background: #d81c3f;
+background: #2959a5;
 }
 ul li:hover:nth-child(4) a:after{
-background: #e46880;
+background: #72a1eb;
 }
 
 
@@ -131,3 +128,50 @@ background: #e46880;
 }
 
 /* button css effect ends here */
+
+
+.content{
+    visibility: hidden;
+    max-width: 100%;
+    max-height: 30vh;
+    position: absolute;
+    left: 57px;
+    top: -34px;
+    transition: opacity 0.3s;
+    /*border: 1px solid black;*/
+    height: 100vh;
+    overflow: hidden;
+    transform: scale(0.7);
+    display: flex;
+    flex-direction: row;
+}
+
+#container_left{
+    width: 100%;
+}
+#container_right{
+    writing-mode: vertical-rl;
+    height: 100px;
+    border: 1px dotted;
+    padding-top: 20px;
+    left: 30px;
+}
+
+#content1 h1{
+    top: 71px;
+    left: 29px;
+    font-size: 20px;
+    color: black;
+    z-index: 2;
+    width: 100%;
+    font-family: 'Archivo Black', sans-serif;
+}
+#content1 h2{
+    top: 71px;
+    left: 29px;
+    font-size: 10px;
+    color: black;
+    z-index: 2;
+    width: 100%;
+    font-family: 'Archivo Black', sans-serif;
+}

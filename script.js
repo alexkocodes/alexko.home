@@ -3,6 +3,10 @@ let originalMatrix = window.getComputedStyle(all_buttons[0]).transform;
 let clicked = false;
 let counter = 0;
 
+window.addEventListener("load", function(){
+    AOS.init();
+});
+
 for(let i=0; i<=all_buttons.length; i++){
     all_buttons[i].addEventListener("click", function(e){
         console.log(e.target);
@@ -50,7 +54,7 @@ for(let i=0; i<=all_buttons.length; i++){
           all_buttons[i].style.transform = "rotate(-30deg) skew(25deg) translate(20px,-15px)";
           all_buttons[i].style.boxShadow = "-50px 50px 50px rgba(0,0,0,.5)"
         }
-    })
+    });
     all_buttons[i].addEventListener("mouseout", function(){
         document.getElementById(`bio${i+1}`).style.opacity = "0%";
         if(!clicked){

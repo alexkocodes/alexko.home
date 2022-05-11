@@ -3,90 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="initial-scale=1.0">
-    <title>Alex Portfolio</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
-    </style>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/index.css" rel="stylesheet" type="text/css" />
+    <title>Alex Ko</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Observer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/EaselPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/PixiPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js" defer></script>
+    <script src="./js/index.js" defer></script>
 </head>
-<body>
-  
-  <div id="bio1" class="bio_block">
-    <p>30MFF is a film about living as a NYU student in NYC. The film was made with a collection of real footages shot by me and another student during our time in NY. </p>
-  </div>
-  <div id="bio2" class="bio_block">
-    <p>COMIX STRIP is an interactive, choose-your-own-adventure type of comic story. We drew inspiration from the cats on our campus, and created a a story about an cat who overthinks!</p>
-  </div>
-  <div id="bio3" class="bio_block">
-    <p>SOUNDSCAPE is an immersive audio storytelling experience that guides users through a horrow story about the mysterious birds residing on Saadiyat Island...</p>
-  </div>
-  <div id="bio4" class="bio_block">
-    <p>VID-E-OH is a project about, videos! We created a story where we were trying to solve a mystery and find out the true guilty one, with lots of twists and humor! </p>
-  </div>
-    <ul>
-      <li >
-        <a id="btn1" class="btn hovered_btn">
-          <span> - 30MFF</span>
-          <div id="content1" class="content">
-            <div id="container_left">
-                <h1>My 30MFF Film</h1>
-                <h2>A day in the life of a NYU student.</h2>
-            </div>
-            <div id="container_right">
-                Watch Now
-            </div>
-          </div>
-        </a>
-      </li>
-      <li > 
-        <a id="btn2" class="btn hovered_btn">
-          <span> - COMIX STRIP</span>
-          <div id="content2" class="content">
-            <div id="container_left">
-                <h1>LOVE COMICS?</h1>
-                <h2>I made some comics about cats too.</h2>
-            </div>
-            <div id="container_right">
-                Read Now
-            </div>
-          </div>
-        </a>
-      </li>
-      <li >
-        <a id="btn2" class="btn hovered_btn">
-          <span> - SOUNDSCAPE </span>
-          <div id="content3" class="content">
-            <div id="container_left">
-                <h1>OPEN YOUR EARS...</h1>
-                <h2>I also designed some soundscape!</h2>
-            </div>
-            <div id="container_right">
-                Listen Now
-            </div>
-          </div>
-        </a>
-      </li>
-      <li >
-        <a id="btn2" class="btn hovered_btn">
-          <span> - VID-E-OH</span>
-          <div id="content4" class="content">
-            <div id="container_left">
-                <h1>NOT AN ACTOR</h1>
-                <h2>The debut and end of my acting career.</h2>
-            </div>
-            <div id="container_right">
-                Watch Now
-            </div>
-          </div>
-        </a>
-      </li>
-    </ul>
-    
-</body>
+
+    <body>
+        <div class="container">
+          <section id="section1" data-bgcolor="#bcb8ad" data-textcolor="#032f35">
+            <h1 data-scroll data-scroll-speed="3">Hi, I am Alex.</h1> 
+            <img data-aos="fade-up-left" src="images/portrait.jpg" alt="Porfile image">
+          </section>
+          <section id="section2" data-bgcolor="#eacbd1" data-textcolor="#536fae">
+            <img src="images/me.jpg" alt="">
+            <h3 data-scroll data-scroll-speed="1">I am a junior majoring in Computer Science and minoring in Music and Interactive Media at New York University. My interests include Web Dev, Full Stack, UX/UI Design, Music Technology. 
+              <br>
+              <br>
+              I am currently located in Abu Dhabi.
+            </h3>
+          </section>
+      
+          <section id="section3" data-bgcolor="#536fae" data-textcolor="#eacbd1">
+           <ul>
+            <li >
+              
+                <span> - Portfolio</span>
+                <div id="content4" class="content">
+                  <div id="container_left">
+                      <h1>My Portfolio Site</h1>
+                      <h2>On this website you can find four projects that I've been a part of for my Communicatins Lab course.</h2>
+                  </div>
+                  <div id="container_right">
+                    <a href="portfolio.html" target="_blank">Go to site</a>
+                    <br>
+                    <a href="portfolio_responsive.html" target="_blank">Go to site (mobile friendly)</a>
+                  </div>
+                </div>
+             
+            </li>
+           </ul>
+          </section>
+          <section data-bgcolor="#e3857a" data-textcolor="#f1dba7">
+            <h3 data-scroll data-scroll-speed="1">Check out my GitHub <a href="https://github.com/fyk211" target="_blank">here</a>. One notable project that I've done is the Rate My NYU Professors extension. You can also access it <a href="https://chrome.google.com/webstore/detail/rate-my-nyu-professors/mhgjkecddklmbnllifdpkhcnhfpkjfji">here</a> on the Chrome Web Store.</h3>
+            <img src="images/PromoMedium.png" alt="">
+          </section>
+
+          <section id="section5" data-bgcolor="#eacbd1" data-textcolor="#536fae">
+            <h2>During my free time, I make, write, and produce music :) </h2>
+            <iframe  src="https://www.youtube.com/embed/bx5vGSTyn1E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </section>
+
+          <section id="section5" data-bgcolor="#eacbd1" data-textcolor="#536fae">
+            <h2>Interested? Let's get in touch!</h2>
+            <ul id="list">
+              <li>
+                <a href="mailto:fyk211">fyk211@nyu.edu</a>
+              </li>
+              <li>
+                <a href="https://github.com/fyk211" target="_blank">GitHub</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UCXHh0STlugilg4RPgaorMTA" target="_blank">YouTube</a>
+              </li>
+              <li>
+                <a href="/images/Fei Yuan Ko CV.pdf" download>CV</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/fei-yuan-ko/" target="_blank"> LinkedIn</a>
+              </li>
+            </ul>
+          </section>
+      
+        </div>
+      </body>
+
 </html>

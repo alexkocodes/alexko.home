@@ -241,3 +241,9 @@ background: #72a1eb;
     font-family: Termina;
     font-size: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+  #section3 div{
+      width: 90%;
+  }
+}
